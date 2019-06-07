@@ -9,8 +9,11 @@
     nav {
         display: flex;
         width: 40%;
-        min-width: 350px;
+        min-width: 400px;
         justify-content: space-between;
+        @media @mobile {
+            min-width: 300px;
+        }
         a {
             padding: 10px 0 10px 0;
             text-decoration: none;

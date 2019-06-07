@@ -2,12 +2,17 @@
 
 .home {
   button {
-    .btn(darkblue,white)
+    .btn(darkblue,white);
+    @media @mobile {
+      border-radius: 7px;
+      width: 100%;
+    }
   }
   button:hover {
     background-color: lightblue;
     color: darkblue;
   }
+
   
   .intro {
 
@@ -32,21 +37,10 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
-      .blast {
-        @media @mobile {
-          width: 100%;
-        }
+      @media @mobile {
+        display: none;
       }
-      .sky {
-        @media (max-width:500px) {
-          display: none;
-        }
-      }
-      .launch {
-        @media @mobile {
-          display: none;
-        }
-      }
+      
     }
   }
 
@@ -68,9 +62,17 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @mobile {
+      flex-direction: column-reverse;
+      padding: 20px 0 0 0;
+      margin: 2.5%;
+    }
 
     .walk-text {
       width: 50%;
+      @media @mobile {
+        width: 100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -80,19 +82,33 @@
         margin-bottom: 26px;
       }
 
-      .btn {
-      }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @mobile {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 15px;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
       }
+    }
+  }
+
+  .blast-2 {
+    display: none;
+    @media @mobile {
+      display: block;
+      width: 95%;
+      margin: 20px 2.5%;
+      border-radius: 20px;
+      height: 100%;
     }
   }
 }// home
